@@ -1,12 +1,13 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
+import './galleryNavigation.css'
 
 const GalleryNavigation = ({galleries}) => {
     
     const galleryList = galleries.map(gallery => {
     return(
-        <NavLink
-            to= {`/galleries/${gallery.id}`} 
+        <NavLink key={gallery.id}
+            to={`/galleries/${gallery.galleryid}`} 
         >
             {gallery.name}
         </NavLink>
